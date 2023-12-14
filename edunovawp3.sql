@@ -17,6 +17,8 @@ cijena decimal(18,2),
 vaucer bit
 );
 
+ovo je dio koji sam promijenio da bi mi github to vidio
+
 create table grupe(
 
 	sifra			int			not null primary key identity(1,1),
