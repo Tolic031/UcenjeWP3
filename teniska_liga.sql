@@ -17,12 +17,11 @@ create table mecevi(
 id int not null primary key identity(1,1),
 izazivac  int not null,
 izazvani int not null,
-pobjednik  varchar(50),
 datum datetime not null,
 red  char(10) not null,
 napomena text,
 sezona int,
-natjecatelj int
+pobjednik int
 );
 
 create table natjecatelji(
@@ -35,7 +34,7 @@ clan bit not null,
 );
 
 alter table mecevi add foreign key (sezona) references sezone(id);
-alter table mecevi add foreign key (natjecatelj) references natjecatelji(id);
+alter table mecevi add foreign key (pobjednik) references natjecatelji(id);
 alter table mecevi add foreign key (izazivac) references natjecatelji(id);
 alter table mecevi add foreign key (izazvani) references natjecatelji(id);
 
@@ -55,11 +54,11 @@ values
 ('Tomislav','Wilhelm', 1),
 ('Jadranko','Grubišić', 1);
 
-insert into mecevi (izazivac, izazvani, datum, red)
+insert into mecevi (izazivac, izazvani, datum, red, pobjednik)
 values 
-(1,2,'2024-04-01 15:00:00', '5'),
-(3,4,'2024-04-01 16:30:00', '4'),
-(5,6,'2024-04-01 18:00:00', '3'),
-(7,8,'2024-04-01 19:30:00', '2'),
-(9,10,'2024-04-01 21:00:00', '1');
+(1,2,'2024-04-01 15:00:00', '5', null),
+(3,4,'2024-04-01 16:30:00', '4', null),
+(5,6,'2024-04-01 18:00:00', '3', 5),
+(7,8,'2024-04-01 19:30:00', '2', null),
+(9,10,'2024-04-01 21:00:00', '1', 10);
 
