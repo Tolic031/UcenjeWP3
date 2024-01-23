@@ -15,8 +15,8 @@ cijena decimal (18,2)not null,
 
 create table mecevi(
 id int not null primary key identity(1,1),
-izazivac  int,
-izazvani int,
+izazivac  int not null,
+izazvani int not null,
 pobjednik  varchar(50),
 datum datetime not null,
 red  char(10) not null,
@@ -42,14 +42,6 @@ alter table mecevi add foreign key (izazvani) references natjecatelji(id);
 insert into sezone (pocetak_sezone,kraj_sezone,cijena)
 values ('2024-04-01 08:00:00', '2024-11-15 23:59:59', 100)
 
-insert into mecevi (datum, red)
-values 
-('2024-04-01 15:00:00', '5'),
-('2024-04-01 16:30:00', '4'),
-('2024-04-01 18:00:00', '3'),
-('2024-04-01 19:30:00', '2'),
-('2024-04-01 21:00:00', '1');
-
 insert into natjecatelji (ime, prezime, clan)
 values
 ('Valent','Brkić', 1),
@@ -62,3 +54,12 @@ values
 ('Sara','Matijević', 2),
 ('Tomislav','Wilhelm', 1),
 ('Jadranko','Grubišić', 1);
+
+insert into mecevi (izazivac, izazvani, datum, red)
+values 
+(1,2,'2024-04-01 15:00:00', '5'),
+(3,4,'2024-04-01 16:30:00', '4'),
+(4,5,'2024-04-01 18:00:00', '3'),
+(5,6,'2024-04-01 19:30:00', '2'),
+(7,8,'2024-04-01 21:00:00', '1');
+
