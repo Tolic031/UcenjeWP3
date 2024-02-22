@@ -11,7 +11,7 @@ namespace UcenjeCS
 
         public static void Izvedi()
         {
-            // pitati profa - Šta nam znači \r, kako staviti hrvatske dijakritičke znakove.
+            
 
             string Ime;
             Console.Write("Unesi ime: ");
