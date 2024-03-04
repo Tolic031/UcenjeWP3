@@ -67,17 +67,70 @@ namespace UcenjeCS
             }
             Console.WriteLine();
 
-            //PETLJE SE MOGU UGNJEZDITI
-            //domaća zadaća - navedeni kod formatirati na način da su brojke jedna ispod druge
-            for (int i = 1; i<=10; i++ )
-            {
-                for (int j = 1; j <= 10; j++)
-                {
+            // petlja se može preskočiti tj. nastaviti
 
-                    Console.Write($"{i * j,-4}");
+            for (int i = 0; i<10; i++)
+            {
+                if (i == 3) // preskače se broj 3
+                {
+                    continue; // shortcuircuiting
                 }
-                Console.WriteLine();
+               
+                    Console.WriteLine(i);
+               
             }
+
+            // petlja se može nasilno prekinuti
+            for (int i = 0; i< 10; i++)
+            {
+                if (i == 3)
+                {
+                    break;
+                }
+                Console.WriteLine(i);
+            }
+
+            for (int i = 0; i< 10; i++)
+            {
+                for (int j= 0; j< 10; j++)
+                {
+                    //kako prekinuti vanjsku petlju (varijabla i)
+                    goto labela;
+                   // break; // prekida se unutarnja petlja, varijabla j
+                }
+            }
+
+            labela:
+            Console.WriteLine("Nastavljam nakon vanjske petlje");
+
+
+            // BESKONAČNA PETLJA
+            for (; ; )
+            {
+                Console.WriteLine(new Random().NextInt64(1-100));
+                break;
+            }
+
+            // 9 različitih načina zbrajanja prvih 100 brojeva
+
+            // int i, s=0; for(i=1;i<=100;i++) s+=i;
+
+            // int i, s; for(i=1, s=0;i<=100; s+=i, i++);
+            //
+            // int i=1, s=0; for( ; i<=100; i++){ s+=i; }
+            //
+            // int i, s=0; for(i=1; ; i++){ if(i<=100) s+=i; else break;}
+            //
+            // int i, s=0; for(i=1;i<=100; ){ s+=i; i++;}
+            //
+            //int i, s=0; for(i=1; ; ){ if(i<=100) {s+=i; i++;} else break;}
+            //
+            // int i=1, s=0; for( ; i<=100 ; ){ s+=i; i++;}
+            //
+            // int i=1, s=0; for( ; ; i++){if(i<=100)  s+=i; else break;}
+            //
+            // int i=1, s=0; for( ;  ; ){if(i<=100) {s+=i; i++;} else break;} 
+            //		
         }
 
 
