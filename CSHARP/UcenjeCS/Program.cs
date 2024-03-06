@@ -11,7 +11,8 @@ using UcenjeCS;
 //E06ForPetlja.Izvedi();
 //E07WhilePetlja.Izvedi();
 //E08DoWhile.Izvedi();
-E09ForEach.Izvedi();
+//E09ForEach.Izvedi();
+Subota1.Izvedi();
 
 //Z01.Izvedi();
 //Z02.Izvedi();
