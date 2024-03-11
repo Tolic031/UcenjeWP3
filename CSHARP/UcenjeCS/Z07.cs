@@ -19,25 +19,25 @@ namespace UcenjeCS
             int visina = Pomocno.UcitajCijeliBroj("Unesi visinu u cm");
             float tezina = Pomocno.UcitajDecimalniBroj("Unesi težinu u kg");
 
-            Console.WriteLine("ime.EndsWith('a'): " + ime.EndsWith("a"));
+            
 
             if (visina > 170 && visina< 190)
             {
-                if (tezina < 90.5)
-                {
-                    Console.Write("Ti ");
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.Write(ime);
-                    Console.ResetColor();
-                    Console.Write(" si zgodan");
-                }
-                else if (ime.EndsWith("a"))
+                if (tezina < 90.5 && ime.EndsWith("a"))
                 {
                     Console.Write("Ti ");
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.Write(ime);
                     Console.ResetColor();
                     Console.Write(" si zgodna");
+                }
+                else
+                {
+                    Console.Write("Ti ");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write(ime);
+                    Console.ResetColor();
+                    Console.Write(" si zgodan");
                 }
             }
            
