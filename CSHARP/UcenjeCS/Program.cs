@@ -13,6 +13,7 @@ using UcenjeCS;
 //E08DoWhile.Izvedi();
 //E09ForEach.Izvedi();
 //E10Metode.Izvedi(); // kada se metoda poziva na klasi (što je ovdje slučaj) ona je static
+E11Rekurzija.Izvedi();
 
 //Subota1.Izvedi();
 
@@ -22,4 +23,4 @@ using UcenjeCS;
 //Z04.Izvedi();
 //Z05.Izvedi();
 //Z06.Izvedi();
-Z07.Izvedi();
+//Z07.Izvedi();
